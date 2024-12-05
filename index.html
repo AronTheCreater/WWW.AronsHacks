@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aron's Hacks</title>
+    <style>
+        body {
+            background: linear-gradient(rgb(104, 59, 59), rgb(47, 96, 84)); /* Gradient background */
+            display: grid;
+            place-items: center;
+            margin: 0;
+            height: 100vh;
+            position: relative; /* Allows absolute positioning for children */
+        }
+        h3 {
+            color: white; /* Make the text visible on the gradient */
+            margin-bottom: 20px;
+        }
+        .INFO_Button {
+            width: 200px; /* Set width for the image inside the button */
+            height: auto; /* Maintain aspect ratio */
+        }
+        button {
+            background: none; /* Remove default button styles */
+            border: none; /* Remove border */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            padding: 0; /* Remove extra padding */
+            position: absolute;
+            top: 80vh; /* Adjust top value */
+            left: 10px; /* Align it to the left */
+        }
+    </style>
+    <script>
+        // Function to open the info in a new tab
+        function openInfo() {
+            var infoWindow = window.open("", "_blank"); // Open a new tab
+            infoWindow.document.write("<h2>Project Information</h2>");
+            infoWindow.document.write("<p><strong>Dev:</strong> Aron M</p>");
+            infoWindow.document.write("<p><strong>Why did I make this?:</strong> I want to show my classmates.</p>");
+            infoWindow.document.write("<p><strong>What is this for?:</strong> Can't tell you!</p>");
+            infoWindow.document.title = "Info"; // Corrected the title assignment
+        }
+    </script>
+</head>
+<body>
+    <!-- Heading -->
+    <h3>Click here for info</h3>
+    <!-- Button with image -->
+    <button type="button" onclick="openInfo()">
+        <img src="Images/ButtonP.png" alt="Images/ButtonP" id="INFO_Button" class="INFO_Button">
+    </button>
+</body>
+</html>
